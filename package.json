@@ -1,5 +1,5 @@
 {
-  "name": "bluemix-hello-node",
+  "name": "sampleproject",
   "version": "0.0.0",
   "dependencies": {
     "cf-deployment-tracker-client": "*",
@@ -11,10 +11,14 @@
   },
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "set PORT=5050 && set name=pavani && node server.js",
+    "start-dev": "nodemon server.js"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/IBM-Bluemix/bluemix-hello-node.git"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
   }
 }

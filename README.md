@@ -149,3 +149,11 @@ started.
 `README.md`
 
 This file!
+
+npm i 
+
+npm i --save-dev
+
+npm run start
+
+npm run start-dev

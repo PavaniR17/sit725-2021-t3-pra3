@@ -13,6 +13,8 @@ var port = process.env.PORT || 8080;
 
 app.use(express.static(__dirname + '/public'));
 
+console.log(process.env.name)
+
 app.get("/test", function (request, response) {
   var user_name = request.query.user_name;
   response.end("Hello " + user_name + "!");
@@ -31,6 +33,27 @@ io.on('connection', (socket) => {
 
 });
 
+
+let id = 1;
+const projects = []
+
+for (let id = 0; id < 21; id++ ){
+  projects.push({
+    prijectID: id,
+    title: 'projects' + id,
+    info: `This info is for project number ${id}`,
+    img: null,
+  });
+}
+
+app.get("/projects", function(request, response){
+  response.json(projects);
+});
+
+
+//app.get("/projects", function(request, response){
+ // response.end("Hello" + user_name + "!");
+ //});
 
 http.listen(port,()=>{
   console.log("Listening on port ", port);
