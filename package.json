@@ -1,1 +1,9 @@
-{"main":"server.js","scripts":{"start":"set PORT=5050 && set name=pavani && node server.js","start-dev":"nodemon server.js"},"repository":{"type":"git","url":"https://github.com/IBM-Bluemix/bluemix-hello-node.git"},"devDependencies":{"nodemon":"^2.0.15"},"dependencies":{"cf-deployment-tracker-client":"^0.1.4","express":"^4.17.2","mongodb":"^4.3.1","mongoose":"^6.2.1","socket.io":"^4.4.1"}}
+{
+  "dependencies": {
+    "express": "^4.17.2",
+    "mongodb": "^4.3.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
